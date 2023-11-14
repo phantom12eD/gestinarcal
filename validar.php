@@ -28,13 +28,13 @@ if ($result) {
     if ($num_rows > 0) {
         $row = mysqli_fetch_assoc($result);
 
-        // Verificar la contraseña usando AES_DECRYPT
+        // Verificar la contraseña usando AES_DECRYPT/*/*//-*///sdasdadasdad
         if ($contraseña === $row['decrypted_password']) {
             // Iniciar sesión solo si el usuario y la contraseña son correctos
             $_SESSION['usuario'] = $usuario;
 
             // Redirigir a la página después del inicio de sesión
-            header("Location: index.php");
+            header("Location: manu.php");
             exit();
         } else {
             echo "Contraseña incorrecta.";
